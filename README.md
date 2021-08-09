@@ -1,3 +1,3 @@
-# dumbbell : Journey to learn and implement various Data Strcutres and Algorithms
+Journey to learn and implement various Data Strcutres and Algorithms
 
-
+Members: @Jai-Gaur-26 @utkzas @rahulsain
