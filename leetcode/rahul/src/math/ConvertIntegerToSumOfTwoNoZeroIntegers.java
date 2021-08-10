@@ -13,41 +13,25 @@ public class ConvertIntegerToSumOfTwoNoZeroIntegers {
 
 
     public static int[] getNoZeroIntegers(int n) {
-        int temp = n - 1;
-        int[] ans = new int[2];
-        while (temp > 0) {
-            ans[0] = temp;
-            ans[1] = n - temp;
-            if (check(ans[0], ans[1])) {
-                break;
-            }
-            temp--;
+        n--;
+        int m = 1;
+        int[] ans = {m, n};
+
+        while (contains(ans[0]) || contains(ans[1])) {
+            ans[0]++;
+            ans[1]--;
         }
+
         return ans;
     }
 
-    public static boolean check(int a, int b) {
-        int temp = a;
-        int rem = 0;
-        boolean ch = true;
-        while (temp > 0) {
-            rem = temp % 10;
-            if (rem == 0) {
-                ch = false;
-                break;
-            }
-            temp /= 10;
+    public static boolean contains(int n) {
+        while (n != 0) {
+            if (n % 10 == 0)
+                return true;
+            n = n / 10;
         }
-        temp = b;
-        while (temp > 0) {
-            rem = temp % 10;
-            if (rem == 0) {
-                ch = false;
-                break;
-            }
-            temp /= 10;
-        }
-        return ch;
+        return false;
     }
 
 }
