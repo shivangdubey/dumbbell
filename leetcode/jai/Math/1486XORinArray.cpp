@@ -1,7 +1,8 @@
+//Problem Link: https://leetcode.com/problems/xor-operation-in-an-array/
 class Solution {
 public:
     int xorOperation(int n, int start) {
-        int nums[n];
+        int nums[n];//array
         nums[0] = start;
         int ans = nums[0];
         for (int i = 1; i < n; i++) {
